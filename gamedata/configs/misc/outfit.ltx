@@ -869,7 +869,7 @@ fire_wound_immunity			= -0.002
 [merc_outfit]:outfit_base
 GroupControlSection	= spawn_group
 discovery_dependency =
-$spawn 			= "outfit\merc_outfit_outfit"
+$spawn 			= "outfit\merc_outfit"
 $prefetch 		= 32
 class			= E_STLK
 cform           = skeleton
@@ -937,6 +937,90 @@ explosion_immunity			= 0.03
 fire_wound_immunity			= 0.01
 
 [sect_merc_outfit_immunities_add]
+burn_immunity				= -0.01			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.0
+shock_immunity				= -0.01
+wound_immunity				= -0.01
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= -0.01
+explosion_immunity			= -0.01
+fire_wound_immunity			= -0.002
+
+;---------------------------------------------------------------------------------------------
+;		КОСТЮМ МОНОЛИТА
+;---------------------------------------------------------------------------------------------
+[monolit_outfit]:outfit_base
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 			= "outfit\monolit_outfit"
+$prefetch 		= 32
+class			= E_STLK
+cform           = skeleton
+visual          = dynamics\outfit\monolit
+actor_visual	= actors\stalker_mp\stalker_merc_2.ogf
+player_hud_section	= actor_hud_merc
+
+ef_equipment_type	= 4
+
+inv_name			= dolg_heavy_outfit_name
+inv_name_short		= dolg_heavy_outfit_name
+description			= dolg_heavy_outfit_description
+
+inv_weight			= 15.0
+
+slot				= 6
+inv_grid_width     = 2
+inv_grid_height    = 3
+inv_grid_x         = 10
+inv_grid_y         = 32
+
+upgr_icon_x			= 0
+upgr_icon_y			= 0
+upgr_icon_width		= 301
+upgr_icon_height   	= 157
+full_icon_name		= npc_icon_dolg_heavy_outfit
+
+cost				= 25000
+full_scale_icon		= 8,6		;иконка сталкера в костюме в полный рост
+
+immunities_sect			= sect_merc_outfit_immunities
+
+; MEDIUM RESISTANCE
+burn_protection 				= 0.0500
+shock_protection 				= 0.200
+radiation_protection 			= 0.0020
+chemical_burn_protection 		= 0.0300
+telepatic_protection 			= 0.0
+strike_protection 				= 0.38
+explosion_protection 			= 0.4
+wound_protection				= 0.38
+
+hit_fraction_actor				= 0.35
+bones_koeff_protection 			= actor_armor_heavy
+
+additional_inventory_weight		= 10
+additional_inventory_weight2	= 10
+artefact_count          = 0
+control_inertion_factor = 1.8
+power_loss				= 0.55
+
+upgrades                = up_gr_firstab_dolg_heavy_outfit, up_gr_seconab_dolg_heavy_outfit, up_gr_thirdab_dolg_heavy_outfit, up_gr_fourtab_dolg_heavy_outfit
+installed_upgrades      =
+upgrade_scheme          = upgrade_scheme_dolg_heavy_outfit
+
+[sect_monolit_outfit_immunities]
+burn_immunity				= 0.03			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.0
+shock_immunity				= 0.03
+wound_immunity				= 0.03
+radiation_immunity			= 0.0
+telepatic_immunity			= 0.0
+chemical_burn_immunity		= 0.03
+explosion_immunity			= 0.03
+fire_wound_immunity			= 0.01
+
+[sect_monolit_outfit_immunities_add]
 burn_immunity				= -0.01			;коэффициенты иммунитета самого костюма
 strike_immunity				= 0.0
 shock_immunity				= -0.01
