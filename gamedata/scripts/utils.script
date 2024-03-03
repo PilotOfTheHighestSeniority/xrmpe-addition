@@ -980,3 +980,76 @@ function parse_str_to_table(input, separator)
 
 	return t
 end
+
+function parse_all_weapon_files()
+	local weapon_table =
+	{
+		"mp_wpn_abakan",
+		"mp_wpn_ak74",
+		"mp_wpn_ak74u",
+		"mp_wpn_beretta",
+		"mp_wpn_bm16",
+		"mp_wpn_colt1911",
+		"mp_wpn_desert_eagle",
+		"mp_wpn_fn2000",
+		"mp_wpn_fort",
+		"mp_wpn_g36",
+		"mp_wpn_gauss",
+		"mp_wpn_groza",
+		"mp_wpn_hpsa",
+		"mp_wpn_knife",
+		"mp_wpn_l85",
+		"mp_wpn_lr300",
+		"mp_wpn_mp5",
+		"mp_wpn_pb",
+		"mp_wpn_pm",
+		"mp_wpn_rpg7",
+		"mp_wpn_sig220",
+		"mp_wpn_sig550",
+		"mp_wpn_spas12",
+		"mp_wpn_svd",
+		"mp_wpn_svu",
+		"mp_wpn_toz34",
+		"mp_wpn_usp",
+		"mp_wpn_val",
+		"mp_wpn_vintorez",
+		"mp_wpn_walther",
+		"mp_wpn_wincheaster1300",
+		"mp_wpn_protecta",
+		"mp_wpn_tt33",
+		"mp_wpn_stechkin",
+		"mp_wpn_apb",
+		"mp_wpn_sr1m",
+		"mp_wpn_pmm",
+		"mp_wpn_gsh18",
+		"mp_wpn_grach",
+		"mp_wpn_glock17",
+		"mp_wpn_fiveseven",
+		"mp_wpn_desert_eagle_silver",
+		"mp_wpn_fort17",
+		"mp_wpn_sig220r",
+		"mp_wpn_usp_match",
+		"mp_wpn_ak101",
+		"mp_wpn_bizon",
+		"mp_wpn_mp5sd",
+		"mp_wpn_saiga12",
+		"mp_wpn_p90",
+		"mp_wpn_sig552",
+		"mp_wpn_ump45",
+		"mp_wpn_akm"
+	}
+
+	local ini_file = system_ini()
+	
+	for k, v in pairs(weapon_table) do
+		local new_f = io.open(_G.path .. tostring(v) .. "_inventory.txt","w+")
+		new_f:write("")
+
+		if ini_file:section_exist(v) then
+			new_f:write("Первый выстрел всегда точный: " .. tostring(ini_file:r_bool(v, "use_first_bullet")) .. "\n")
+		else
+			printf("Section %s does not exist", v)
+		end
+		new_f:close()
+	end
+end

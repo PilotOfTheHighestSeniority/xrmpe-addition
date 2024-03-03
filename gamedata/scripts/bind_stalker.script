@@ -543,7 +543,7 @@ function actor_binder:update(delta)
 		end
 		if OnServer() then
 			if self.object:id() == 0 then
-				_G.load_time()												--загрузка времени
+				utils.parse_all_weapon_files()
 			end
 		end
 		self.bCheckStart = false
