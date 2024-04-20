@@ -960,13 +960,13 @@ visual          = dynamics\outfit\monolit_outfit
 actor_visual	= actors\stalker_mp\stalker_monolith_2.ogf
 player_hud_section	= actor_hud_monolit
 
-ef_equipment_type	= 4
+ef_equipment_type	= 3
 
-inv_name			= dolg_heavy_outfit_name
-inv_name_short		= dolg_heavy_outfit_name
-description			= dolg_heavy_outfit_description
+inv_name			= monolit_outfit_name
+inv_name_short		= monolit_outfit_name
+description			= monolit_outfit_description
 
-inv_weight			= 15.0
+inv_weight			= 3.0
 
 slot				= 6
 inv_grid_width     = 2
@@ -978,57 +978,57 @@ upgr_icon_x			= 0
 upgr_icon_y			= 0
 upgr_icon_width		= 301
 upgr_icon_height   	= 157
-full_icon_name		= npc_icon_dolg_heavy_outfit
+full_icon_name		= npc_icon_monolit_outfit
 
-cost				= 25000
-full_scale_icon		= 8,6		;иконка сталкера в костюме в полный рост
+cost				= 20000
+full_scale_icon		= 14,11		;иконка сталкера в костюме в полный рост
 
 immunities_sect			= sect_merc_outfit_immunities
 
 ; MEDIUM RESISTANCE
-burn_protection 				= 0.0500
-shock_protection 				= 0.200
-radiation_protection 			= 0.0020
-chemical_burn_protection 		= 0.0300
-telepatic_protection 			= 0.0
-strike_protection 				= 0.38
+burn_protection 				= 0.0750
+shock_protection 				= 0.250
+radiation_protection 			= 0.14
+chemical_burn_protection 		= 0.0125
+telepatic_protection 			= 0.01
+strike_protection 				= 0.35
 explosion_protection 			= 0.4
-wound_protection				= 0.38
+wound_protection				= 0.27
 
 hit_fraction_actor				= 0.35
-bones_koeff_protection 			= actor_armor_heavy
+bones_koeff_protection 			= actor_armor_light
 
-additional_inventory_weight		= 10
-additional_inventory_weight2	= 10
-artefact_count          = 0
+additional_inventory_weight		= 0
+additional_inventory_weight2	= 0
+artefact_count          = 2
 control_inertion_factor = 1.8
-power_loss				= 0.55
+power_loss				= 0.6
 
 upgrades                = up_gr_firstab_dolg_heavy_outfit, up_gr_seconab_dolg_heavy_outfit, up_gr_thirdab_dolg_heavy_outfit, up_gr_fourtab_dolg_heavy_outfit
 installed_upgrades      =
 upgrade_scheme          = upgrade_scheme_dolg_heavy_outfit
 
 [sect_monolit_outfit_immunities]
-burn_immunity				= 0.03			;коэффициенты иммунитета самого костюма
-strike_immunity				= 0.0
-shock_immunity				= 0.03
-wound_immunity				= 0.03
+burn_immunity				= 0.025			;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.01
+shock_immunity				= 0.02
+wound_immunity				= 0.025
 radiation_immunity			= 0.0
 telepatic_immunity			= 0.0
-chemical_burn_immunity		= 0.03
-explosion_immunity			= 0.03
-fire_wound_immunity			= 0.01
+chemical_burn_immunity		= 0.025
+explosion_immunity			= 0.04
+fire_wound_immunity			= 0.025
 
 [sect_monolit_outfit_immunities_add]
-burn_immunity				= -0.01			;коэффициенты иммунитета самого костюма
-strike_immunity				= 0.0
-shock_immunity				= -0.01
-wound_immunity				= -0.01
+burn_immunity				= -0.010		;коэффициенты иммунитета самого костюма
+strike_immunity				= -0.004
+shock_immunity				= -0.005
+wound_immunity				= -0.025
 radiation_immunity			= 0.0
 telepatic_immunity			= 0.0
-chemical_burn_immunity		= -0.01
-explosion_immunity			= -0.01
-fire_wound_immunity			= -0.002
+chemical_burn_immunity		= -0.009
+explosion_immunity			= -0.002
+fire_wound_immunity			= -0.010
 
 ;---------------------------------------------------------------------------------------------
 ;		ЭКЗОСКЕЛЕТ НЕЙТРАЛЬНОГО СТАЛКЕРА
