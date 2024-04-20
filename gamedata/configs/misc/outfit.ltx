@@ -877,13 +877,13 @@ visual          = dynamics\outfit\merc_outfit
 actor_visual	= actors\stalker_mp\stalker_merc_2.ogf
 player_hud_section	= actor_hud_merc
 
-ef_equipment_type	= 4
+ef_equipment_type	= 3
 
-inv_name			= dolg_heavy_outfit_name
-inv_name_short		= dolg_heavy_outfit_name
-description			= dolg_heavy_outfit_description
+inv_name			= merc_outfit_name
+inv_name_short		= merc_outfit_name
+description			= merc_outfit_description
 
-inv_weight			= 15.0
+inv_weight			= 5.0
 
 slot				= 6
 inv_grid_width     = 2
@@ -895,28 +895,27 @@ upgr_icon_x			= 0
 upgr_icon_y			= 0
 upgr_icon_width		= 301
 upgr_icon_height   	= 157
-full_icon_name		= npc_icon_dolg_heavy_outfit
+full_icon_name		= npc_icon_dolg_heavy_outfit ; под вопросом? Не используется (иконка ГГ в костюме в полный рост, использовалась только в инвентаре ТЧ) 
 
-cost				= 25000
-full_scale_icon		= 8,6		;иконка сталкера в костюме в полный рост
+cost				= 13500
+full_scale_icon		= 14,11 	;иконка сталкера в костюме в полный рост
+helmet_avaliable	 	= false
 
 immunities_sect			= sect_merc_outfit_immunities
 
 ; MEDIUM RESISTANCE
-burn_protection 				= 0.0500
-shock_protection 				= 0.200
-radiation_protection 			= 0.0020
-chemical_burn_protection 		= 0.0300
+burn_protection 				= 0.0400
+shock_protection 				= 0.100
+radiation_protection 			= 0.005
+chemical_burn_protection 		= 0.0350
 telepatic_protection 			= 0.0
-strike_protection 				= 0.38
-explosion_protection 			= 0.4
-wound_protection				= 0.38
+strike_protection 				= 0.3
+explosion_protection 			= 0.6
+wound_protection				= 0.4
 
-hit_fraction_actor				= 0.35
-bones_koeff_protection 			= actor_armor_heavy
+hit_fraction_actor				= 0.5
+bones_koeff_protection 			= actor_armor_medium_head_hard
 
-additional_inventory_weight		= 10
-additional_inventory_weight2	= 10
 artefact_count          = 0
 control_inertion_factor = 1.8
 power_loss				= 0.55
@@ -926,26 +925,26 @@ installed_upgrades      =
 upgrade_scheme          = upgrade_scheme_dolg_heavy_outfit
 
 [sect_merc_outfit_immunities]
-burn_immunity				= 0.03			;коэффициенты иммунитета самого костюма
-strike_immunity				= 0.0
-shock_immunity				= 0.03
+burn_immunity				= 0.03		;коэффициенты иммунитета самого костюма
+strike_immunity				= 0.02
+shock_immunity				= 0.04
 wound_immunity				= 0.03
 radiation_immunity			= 0.0
 telepatic_immunity			= 0.0
 chemical_burn_immunity		= 0.03
-explosion_immunity			= 0.03
+explosion_immunity			= 0.01
 fire_wound_immunity			= 0.01
 
 [sect_merc_outfit_immunities_add]
-burn_immunity				= -0.01			;коэффициенты иммунитета самого костюма
-strike_immunity				= 0.0
+burn_immunity				= -0.005		;коэффициенты иммунитета самого костюма
+strike_immunity				= -0.007
 shock_immunity				= -0.01
 wound_immunity				= -0.01
 radiation_immunity			= 0.0
 telepatic_immunity			= 0.0
-chemical_burn_immunity		= -0.01
-explosion_immunity			= -0.01
-fire_wound_immunity			= -0.002
+chemical_burn_immunity		= -0.005
+explosion_immunity			= -0.002
+fire_wound_immunity			= -0.0025
 
 ;---------------------------------------------------------------------------------------------
 ;		КОСТЮМ МОНОЛИТА
